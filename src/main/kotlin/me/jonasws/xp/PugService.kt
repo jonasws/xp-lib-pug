@@ -8,8 +8,8 @@ import com.enonic.xp.script.bean.ScriptBean
 import de.neuland.jade4j.JadeConfiguration
 
 class PugService : ScriptBean {
-    val pugConfig = JadeConfiguration()
-    lateinit var resourceService: ResourceService
+    private val pugConfig = JadeConfiguration()
+    private lateinit var resourceService: ResourceService
 
     override fun initialize(context: BeanContext) {
         // Disable template caching if Enonic is running in dev mode

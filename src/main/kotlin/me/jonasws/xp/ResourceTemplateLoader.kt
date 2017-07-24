@@ -6,7 +6,7 @@ import com.enonic.xp.resource.ResourceService
 import de.neuland.jade4j.template.TemplateLoader
 import java.io.Reader
 
-class ResourceTemplateLoader(val resourceService: ResourceService) : TemplateLoader {
+class ResourceTemplateLoader(private val resourceService: ResourceService) : TemplateLoader {
 
     private fun getResource(name: String): Resource {
         val splitArray = name.split(":")
